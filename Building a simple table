@@ -1,0 +1,44 @@
+CREATE TABLE friends (
+  id INTEGER,
+  name TEXT,
+  birthday TEXT
+);
+
+//create a simple table
+
+INSERT INTO friends (id, name, birthday)
+VALUES (1, 'Jane Doe', '1990-30-05');
+
+//add 3 columns to the table
+
+SELECT * FROM friends; //check
+
+INSERT INTO friends (id, name, birthday)
+VALUES (2, 'Johnny Cash', '1932-26-02')
+
+INSERT INTO friends (id, name, birthday)
+VALUES (3, 'Beyonce Knowles', '1981-04-09');
+
+//insert two more rows into the table 
+
+UPDATE friends
+SET name = 'Jane Smith'
+WHERE id = 1;
+
+//change value in a column
+
+ALTER TABLE friends 
+ADD COLUMN email TEXT;
+
+//add another column to table
+
+UPDATE friends
+SET email = 'jane@codeacademy.com'
+WHERE id = 1;
+
+//update information for that new column 
+
+DELETE FROM friends
+WHERE id = 1;
+
+//delete a row
